@@ -39,3 +39,34 @@ for i in range(img1.shape[0]):
 cv2.imshow("Resta", resta)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+# Aumentar brillo de imagen################################################################################################
+
+import cv2
+import numpy as np
+
+# Cargamos la imagen 
+img = cv2.imread('C:\\Users\\halo_\\Desktop\\dooooos.JPG')
+img_original = cv2.imread('C:\\Users\\halo_\\Desktop\\dooooos.JPG')
+
+# Obtenemos las dimensiones de las imagenes
+height, width, channels = img.shape
+
+# Aumentamos el brillo
+for i in range(height):
+  for j in range(width):
+    # Obtenemos el valor de cada canal en el pixel (i,j)
+    blue = img[i, j, 0]
+    green = img[i, j, 1]
+    red = img[i, j, 2]
+
+    # Aumentamos el brillo de la imagen
+    img[i, j, 0] = min(255, blue + 30)
+    img[i, j, 1] = min(255, green + 30)
+    img[i, j, 2] = min(255, red + 30)
+
+# Mostramos la imagen resultante
+cv2.imshow("Imagen Original", img_original)
+cv2.imshow("Imagen Modificada", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
