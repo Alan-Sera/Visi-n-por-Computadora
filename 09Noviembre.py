@@ -47,7 +47,7 @@ for i in range(img3.shape[0]):
 # Lo que hicimos TODO
 # Cómo hacer la transformacion
 # Transpuesta
-# Imagenes uin8 
+# Imagenes uint8 
 
 # Desarrollo, diagrama de flujo de como se hace el experimento
 
