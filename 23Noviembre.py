@@ -21,10 +21,10 @@ def detectar_piel(imagen):
                 
     return resultado
 
-ruta_imagen = 'C:\\Users\\halo_\\Desktop\\unooooo.JPG'  # Cambia esto por la ruta de tu imagen
+ruta_imagen = 'C:\\Users\\halo_\\Desktop\\tatuaje.jpeg'  # Cambia esto por la ruta de tu imagen
 
 # Cargar la imagen
-imagen = cv2.imread('C:\\Users\\halo_\\Desktop\\unooooo.JPG')
+imagen = cv2.imread('C:\\Users\\halo_\\Desktop\\tatuaje.jpeg')
 # Llamar a la función para detectar piel
 resultado_piel = detectar_piel(imagen)
 
